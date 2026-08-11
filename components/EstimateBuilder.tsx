@@ -16,10 +16,10 @@ const serviceOptions = [
 ];
 
 export function EstimateBuilder() {
-  const [property, setProperty] = useState(propertyOptions[0]);
-  const [service, setService] = useState(serviceOptions[0]);
-  const [zip, setZip] = useState(site.postalCode);
-  const [notes, setNotes] = useState("");
+  const [property, setProperty] = useState<string>(propertyOptions[0]);
+  const [service, setService] = useState<string>(serviceOptions[0]);
+  const [zip, setZip] = useState<string>(site.postalCode);
+  const [notes, setNotes] = useState<string>("");
 
   const message = useMemo(() => {
     const noteText = notes.trim() ? ` Notes: ${notes.trim()}` : "";
